@@ -8,18 +8,18 @@ public class TiqueTaque {
 
 		if(!estaExecutando) {
 			tique = true;
-			notify();
+			notify(); //notifica a Thread Taque que e a Thread Tique não está sendo executada
 			return;
 		}
 
 		System.out.print("Tique ");
 		tique = true;	
-		notify();
+		notify(); //notifica a Thread do Taque ela pode ser executada
 
 
 		try {
 			while(tique) {
-				wait();
+				wait(); //enquanto for Tique, aguarda a execução da mesma
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block
@@ -31,18 +31,18 @@ public class TiqueTaque {
 
 		if(!estaExecutando) {
 			tique = false;
-			notify();
+			notify(); //notifica a Thread Tique que e a Thread Taque não está sendo executada
 			return;
 		}
 
 		System.out.println("Taque");
 		tique = false;	
-		notify();
+		notify(); //notifica a Thread do Tique ela pode ser executada
 
 
 		try {
 			while(!tique) {
-				wait();
+				wait(); ////enquanto NÃO for Tique, aguarda a execução da mesma
 			}
 		} catch (InterruptedException e) {
 			// TODO Auto-generated catch block

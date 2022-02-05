@@ -9,6 +9,7 @@ public class Teste {
 		ThreadTiqueTaque tique = new ThreadTiqueTaque("Tique", tt);
 		ThreadTiqueTaque taque = new ThreadTiqueTaque("Taque", tt);
 		
+		//método join para que cada Thread aguarde a execução de cada uma, havendo sincronização
 		try {
 			tique.t.join();
 			taque.t.join();
@@ -16,5 +17,4 @@ public class Teste {
 			e.printStackTrace();
 		}
 	}
-
 }

@@ -17,10 +17,10 @@ public class Aula94DiferencaEntreDatas {
 		System.out.println("--- Data até Java 7 ---");
 		diferencaDataAteJava7();
 		
-		System.out.println("--- API Java 8 ---");
+		System.out.println("--- API Java 8 com Local Date ---");
 		diferencaDataJava8();
 		
-		System.out.println("----");
+		System.out.println("--- API Java 8 com LocalDateTime ---");
 		diferencaDataJava8ComTempo();
 	}
 	
@@ -70,9 +70,11 @@ public class Aula94DiferencaEntreDatas {
 		
 		Duration duracao = Duration.between(data1, data2);
 		long diffdays = duracao.toDays();
-		long diffmonth = ChronoUnit.MONTHS.between(data1, data2);
-		long diffHoursChronoUnit = ChronoUnit.HOURS.between(data1, data2);
 		long diffhours = duracao.toHours();
+		//Para meses/ano é necessário usar ChronoUnit	
+		long diffmonth = ChronoUnit.MONTHS.between(data1, data2);
+		//Para horas também é possivel usar o ChronoUnit
+		long diffHoursChronoUnit = ChronoUnit.HOURS.between(data1, data2);
 		
 		System.out.println(diffdays);
 		System.out.println(diffmonth);

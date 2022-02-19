@@ -25,7 +25,7 @@ public class Aula91DateFormat {
 		hojeFormatado = DateFormat.getDateInstance().format(hoje);//somente a data
 		System.out.println(hojeFormatado);
 		
-		hojeFormatado = DateFormat.getTimeInstance().format(hoje); //comente a hora
+		hojeFormatado = DateFormat.getTimeInstance().format(hoje); //somente a hora
 		System.out.println(hojeFormatado);
 		
 		hojeFormatado = DateFormat.getDateTimeInstance().format(hoje); //data e hora
